@@ -232,8 +232,25 @@
     fixedContentPos: false
   });
 
-
-
+  var galleryFilter = function() {
+    $('.filter-btn').on('click', function() {
+      var filterValue = $(this).data('filter');
+      var $grid = $('.gallery-grid');
+      
+      $('.filter-btn').removeClass('active');
+      $(this).addClass('active');
+      
+      $grid.find('.col-md-4').each(function() {
+        var itemCategory = $(this).data('category');
+        if (filterValue === 'all' || itemCategory === filterValue) {
+          $(this).show();
+        } else {
+          $(this).hide();
+        }
+      });
+    });
+  };
+  galleryFilter();
 
 })(jQuery);
 

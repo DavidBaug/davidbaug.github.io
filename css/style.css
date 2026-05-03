@@ -8834,3 +8834,36 @@ textarea.form-control {
   100% {
     stroke-dasharray: 89, 200;
     stroke-dashoffset: -136px; } }
+
+.filter-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 8px;
+}
+
+.filter-btn {
+  background: #212529;
+  color: #fff;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  font-weight: 500;
+}
+
+
+
+.filter-btn:hover,
+.filter-btn.active {
+  background: #F96D00;
+  color: #fff;
+}
+
+.filter-btn:focus {
+  outline: none;
+}
